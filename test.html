@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div class="isHad"></div>
+
+<script>
+    var test = ["137", "133", "70", "49", "36", "9", "152", "106", "82", "68", "2"];
+    var str = "138,23,55,81,110,130,104,41,96,155,66,135,146,27,21,68,123,15,111,161,20,29,52,129,44,49,113,2,13,101,103,150,59,87,40,69,79,50,61,102,98,17,10,121,74,16,108,156,32,162,73,26,12,56,48,83,142,105,86,158,28,134,30,107,118,140,14,6,159,143,80,18,126,47,31,89,99,62,112,4,116,7,33,85,160,90,153,67";
+    var b = str.split(",");
+    var a = [];
+    var flag = false,
+            isS = false,
+            count = 0,
+            f = [],
+            s = [];
+
+    for(var i = 0; i < b.length; i++ ){
+        if(test.indexOf(b[i]) > 0){
+            isS = true;
+            s.push(b[i]);
+        }
+        if(a.indexOf(b[i]) < 0) {
+            a.push(b[i])
+        }else{
+            flag = true;
+            f.push(b[i]);
+            count++;
+        }
+    }
+
+    if(flag){
+        alert("有重复获奖者, 重复个数为" + count + ",重复数为" + f.join(","))
+    }else{
+        alert("无重复获奖者")
+    }
+
+    if(isS){
+        alert("有 ,重复数为" + s.join(","))
+    }
+</script>
+</body>
+</html>

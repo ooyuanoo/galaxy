@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/galaxy.css"/>
+</head>
+<body>
+<!--头部logo-->
+<!-- <div class="header">
+    <img src="image/trslogo.png">
+</div> -->
+
+<!--页面主要场景-->
+<div>
+    <div class="prize-page">
+        <ul id="prize-wrapper"></ul>
+    </div>
+    <div class="lottery-page">
+        <canvas id="galaxy"></canvas>
+        <div class="prize">
+            <img src="image/prize-0.jpg">
+        </div>
+        <div class="list-img-head center">
+            <span class="list-prize-name"></span>
+        </div>
+        <div class="draw-list">
+            <div class="list-head">
+                <span>编号</span>
+                <span class="hidden">奖品名称</span>
+                <span>中奖号码</span>
+                <span>操作</span>
+            </div>
+            <ul class="list-num">
+                <li id="drawing-loading"><i class="fa fa-spin fa-spinner"></i> 等待开奖...</li>
+            </ul>
+        </div>
+        <div class="list-draw-start">
+            <button class="btn btn-start" type="button">开奖</button>
+        </div>
+        <canvas id="galaxy-bak"></canvas>
+    </div>
+</div>
+
+<!--页面指引-->
+<div class="guide">
+    <a class="next active" data-target="lottery-page"><i class="fa fa-chevron-right"></i></a>
+    <a class="prev" data-target="prize-page"><i class="fa fa-chevron-left"></i></a>
+</div>
+
+<!--页面信息-->
+<div class="power">
+    <p>
+        <a class="all-list-view" href="#">中奖名单</a>
+        <!-- @北京拓尔思信息技术股份有限公司广州分公司-年会巨献 -->
+        <a class="clear-storage float-left" href="#">清空所有数据</a>
+    </p>
+</div>
+
+<!--背景star-->
+<canvas id="star-canvas"></canvas>
+
+<!--中奖名单-->
+<div class="all-winnnerList">
+    <h3 class="h3">全部中奖名单<span class="float-right close-list">关闭</span></h3>
+    <table cellpadding="0" cellspacing="0" width="100%">
+        <thead>
+        <tr>
+            <th width="40">编号</th>
+            <th>奖品名称</th>
+            <th>中奖号数</th>
+            <th>替补号数</th>
+        </tr>
+        </thead>
+        <tbody id="all-winner-list-tbody"></tbody>
+    </table>
+</div>
+<audio id="bg-music" src="music/OwlCity,CarlyRaeJepsen-GoodTime.mp3" controls="controls" loop="loop" autoplay>
+    Your browser does not support the audio tag.
+</audio>
+<script src="js/html5_3d_animation.js"></script>
+<script src="js/galaxy.js"></script>
+</body>
+</html>
